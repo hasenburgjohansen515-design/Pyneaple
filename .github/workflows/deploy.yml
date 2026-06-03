@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Get latest code
         uses: actions/checkout@v4
-        with:
-          sparse-checkout: dir
-          sparse-checkout-cone-mode: false
 
       - name: Sync files via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
