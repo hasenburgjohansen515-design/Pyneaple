@@ -1,0 +1,244 @@
+/* ----------------------------------------------------------------------
+   PYNEAPLE SHOP - CLEAN FRAMEWORK
+---------------------------------------------------------------------- */
+
+html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Soft background so white product cards stand out */
+    color: #191919;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px; /* Standard wide-screen e-commerce grid */
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* -------------------- MINIMALIST HEADER (eBay / AliExpress Style) -------------------- */
+.header-top-tier {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    background-color: #ffffff; /* Pure white background lets search bar stand out */
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-logo a {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 2.2em; /* Slightly larger like Amazon/eBay */
+    font-weight: 900; /* Extra bold for that heavy retail brand feel */
+    color: #191919;
+    text-decoration: none;
+    letter-spacing: -1.5px; /* Tighter letter spacing used by major modern brands */
+    text-transform: lowercase; /* Optional: gives it an casual, modern tech look like ebay/amazon */
+}
+
+.header-controls {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9em;
+    align-items: center;
+}
+
+.header-controls a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header-controls a:hover {
+    color: #0066cc; /* Clean corporate blue for text hovers */
+}
+
+/* Search Bar (High contrast, clean lines) */
+.search-form-header {
+    flex-grow: 1;
+    max-width: 650px;
+    display: flex;
+    margin: 0 40px;
+}
+
+.search-form-header input[type="text"] {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #333333; /* Strong neutral boundary */
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 0.95em;
+    outline: none;
+}
+
+.search-form-header button {
+    background-color: #0066cc; /* Crisp, actionable blue search button */
+    color: white; 
+    border: 2px solid #0066cc;
+    border-left: none;
+    padding: 12px 25px;
+    font-weight: 700;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Navigation Links Tier */
+.header-nav-tier {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+    background: #ffffff;
+}
+
+.header-nav-tier a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9em;
+    margin-right: 25px;
+}
+
+.header-nav-tier a:hover {
+    color: #0066cc;
+}
+
+/* -------------------- BANNER SECTION -------------------- */
+.header-image-tier {
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.top-banner-placeholder {
+    flex: 2 1 65%; 
+    padding: 50px;
+    border-radius: 8px;
+    color: white;
+    background: #0066cc; /* High energy deal color for the hero banner */
+}
+
+.top-banner-placeholder h2 {
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+}
+
+.banner-cta {
+    background-color: #ffffff;
+    color: #0066cc;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 700;
+    border-radius: 25px; /* Pill shape looks modern and clickable */
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Quick Links as Uniform Minimalist Cards */
+.category-quick-links {
+    flex: 1 1 35%; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #191919 !important;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    height: 100%;
+    background-color: #ffffff !important;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.quick-link-item:hover {
+    border-color: #191919;
+}
+
+/* -------------------- PRODUCT GRID & RETAIL PRICING -------------------- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px 0; 
+}
+
+.product-item {
+    background-color: #ffffff; 
+    border: 1px solid #e5e5e5;
+    border-radius: 4px; 
+    overflow: hidden; 
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-item:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px; 
+    object-fit: contain; /* Keeps product pictures looking crisp, not stretched */
+    background-color: #ffffff; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-item h2 {
+    color: #191919; 
+    margin: 0 0 5px 0;
+    font-size: 0.95em; 
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* "Good Deal" Text Layout */
+.price {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #dd1e31; /* Retail Red specifically forces attention onto the deal */
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.original-price {
+    font-size: 0.9em;
+    color: #767676;
+    text-decoration: line-through; /* Psychological trick showing they save money */
+}
+
+/* Add to Cart Button (Clean, crisp, secondary priority) */
+.product-item button {
+    background-color: #ffffff; 
+    color: #0066cc; 
+    border: 1px solid #0066cc; 
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 12px;
+    width: 100%; 
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.product-item button:hover {
+    background-color: #0066cc;
+    color: white;
+}
